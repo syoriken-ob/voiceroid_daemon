@@ -4,6 +4,7 @@
     <TargetFramework>net48</TargetFramework>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>8.0</LangVersion> <!-- McMaster.Extensions.CommandLineUtils のビルドに必要 -->
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyTitle>voiceroidd</AssemblyTitle>
@@ -32,11 +33,11 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Codeer.Friendly" Version="2.5.2" />
-    <PackageReference Include="Codeer.Friendly.Windows" Version="2.12.0" />
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.3.2" />
-    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.3.0" />
-    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+    <PackageReference Include="Codeer.Friendly" Version="2.7.0" />
+    <PackageReference Include="Codeer.Friendly.Windows" Version="2.18.0" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="5.0.1" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+    <PackageReference Include="System.ValueTuple" Version="4.6.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aitalk\Aitalk.csproj" />

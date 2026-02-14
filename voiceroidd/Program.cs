@@ -15,7 +15,7 @@ using Aitalk;
 
 namespace VoiceroidDaemon
 {
-    [Command(Name = "voiceroidd", Description = "VOICEROID2 HTTP Server Daemon", ThrowOnUnexpectedArgument = false)]
+    [Command(Name = "voiceroidd", Description = "VOICEROID2 HTTP Server Daemon")]
     [SuppressDefaultHelpOption]
     class Program
     {
