@@ -5,6 +5,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>8.0</LangVersion> <!-- McMaster.Extensions.CommandLineUtils のビルドに必要 -->
   </PropertyGroup>
+
   <PropertyGroup>
     <AssemblyTitle>voiceroidd</AssemblyTitle>
     <Description></Description>
@@ -17,20 +18,24 @@
     <FileVersion>1.0.0.0</FileVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
   </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Codeer.Friendly" Version="2.7.0" />
     <PackageReference Include="Codeer.Friendly.Windows" Version="2.18.0" />
@@ -38,6 +43,7 @@
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
     <PackageReference Include="System.ValueTuple" Version="4.6.1" />
   </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\Aitalk\Aitalk.csproj" />
   </ItemGroup>
