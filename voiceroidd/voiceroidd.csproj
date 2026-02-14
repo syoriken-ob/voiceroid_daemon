@@ -2,7 +2,6 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>8.0</LangVersion> <!-- McMaster.Extensions.CommandLineUtils のビルドに必要 -->
   </PropertyGroup>
