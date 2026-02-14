@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Diagnostics;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using VoiceroidDaemon.Models;
 using System.IO;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
 
 namespace VoiceroidDaemon.Controllers
 {

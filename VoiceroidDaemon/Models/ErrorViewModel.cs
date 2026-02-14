@@ -1,6 +1,4 @@
-using System;
-
-namespace VoiceroidDaemon.Models
+﻿namespace VoiceroidDaemon.Models
 {
     public class ErrorViewModel
     {

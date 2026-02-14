@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Reflection;
 using System.Diagnostics;
-using Codeer.Friendly.Windows;
+using System.Reflection;
 using Codeer.Friendly.Dynamic;
+using Codeer.Friendly.Windows;
 
 namespace Injecter
 {

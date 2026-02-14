@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace VoiceroidDaemon.Models
+﻿namespace VoiceroidDaemon.Models
 {
     /// <summary>
     /// 読み上げパラメータを格納するモデル
