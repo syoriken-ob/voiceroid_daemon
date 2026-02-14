@@ -2,12 +2,6 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net48</TargetFramework>
-    <GenerateManifests>false</GenerateManifests>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-    <ManifestCertificateThumbprint>7CBCA601675EA137BF833645A92CDE32682325D3</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Injecter_TemporaryKey.pfx</ManifestKeyFile>
-    <SignManifests>false</SignManifests>
-    <TargetZone>LocalIntranet</TargetZone>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> <!-- VoiceroidDaemonのビルド時にバイナリのコピーを行うため、サブフォルダが生成されない方が望ましい -->
   </PropertyGroup>
   <PropertyGroup>
