@@ -1,7 +1,7 @@
 <Solution>
   <Project Path="Aitalk/Aitalk.csproj" />
   <Project Path="Injecter/Injecter.csproj" />
-  <Project Path="voiceroidd/voiceroidd.csproj" Id="59726917-207f-4788-a149-6147e725cb85" />
+  <Project Path="voiceroidd/voiceroidd.csproj" />
   <Project Path="VoiceroidDaemon/VoiceroidDaemon.csproj">
     <BuildDependency Project="Injecter/Injecter.csproj" />
   </Project>
