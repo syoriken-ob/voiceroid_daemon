@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Text;
+using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Web;
+using System.Runtime.Serialization.Json;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
-using System.Drawing;
-using System.Diagnostics;
-using System.Runtime.Serialization.Json;
-using System.ComponentModel.DataAnnotations;
-using McMaster.Extensions.CommandLineUtils;
 using Aitalk;
+using McMaster.Extensions.CommandLineUtils;
 
 namespace VoiceroidDaemon
 {
-    [Command(Name = "voiceroidd", Description = "VOICEROID2 HTTP Server Daemon", ThrowOnUnexpectedArgument = false)]
+    [Command(Name = "voiceroidd", Description = "VOICEROID2 HTTP Server Daemon")]
     [SuppressDefaultHelpOption]
     class Program
     {

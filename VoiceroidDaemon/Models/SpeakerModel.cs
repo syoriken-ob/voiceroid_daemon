@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Aitalk;
-
-namespace VoiceroidDaemon.Models
+﻿namespace VoiceroidDaemon.Models
 {
     public class SpeakerModel
     {

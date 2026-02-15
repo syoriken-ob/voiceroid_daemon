@@ -1,19 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <Platforms>AnyCPU</Platforms>
-    <Version>2.0.1</Version>
+    <Version>2.0.2+syorikenob</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget> <!-- VoiceroidEditor.exe(32bitプロセス)に対して操作を行うため、Injecterと同様にx86でビルドする -->
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <Prefer32Bit>false</Prefer32Bit>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget> <!-- VoiceroidEditor.exe(32bitプロセス)に対して操作を行うため、Injecterと同様にx86でビルドする -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -43,19 +41,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
-    <PackageReference Include="System.Drawing.Common" Version="4.7.2" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Aitalk\Aitalk.csproj" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /I /D /Y &quot;$(SolutionDir)Injecter\bin\$(ConfigurationName)&quot; &quot;$(TargetDir)&quot;" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('$(MSBuildProjectDirectory)\..\Injecter\bin\$(Configuration)')">
+    <ItemGroup>
+      <InjecterArtifacts Include="$(MSBuildProjectDirectory)\..\Injecter\bin\$(Configuration)\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(InjecterArtifacts)" DestinationFiles="@(InjecterArtifacts->'$(TargetDir)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
 
 </Project>

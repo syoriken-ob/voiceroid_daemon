@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Diagnostics;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Text;
-using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using Aitalk;
+using Microsoft.Extensions.Hosting;
 
 namespace VoiceroidDaemon
 {
@@ -40,18 +33,22 @@ namespace VoiceroidDaemon
             }
             
             // Webサーバーを構成する
-            var web_host_builder = WebHost.CreateDefaultBuilder();
-            web_host_builder.UseConfiguration(config);
-            web_host_builder.UseStartup<Startup>();
-            if (0 < Setting.System.ListeningAddress.Length)
-            {
-                // 待ち受けURLが指定されていればURLを設定する
-                web_host_builder.UseUrls(Setting.System.ListeningAddress);
-            }
-            var web_host = web_host_builder.Build();
-            
+            var host_builder = Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(web_builder =>
+                {
+                    web_builder.UseConfiguration(config);
+                    web_builder.UseStartup<Startup>();
+                    if (0 < Setting.System.ListeningAddress.Length)
+                    {
+                        // 待ち受けURLが指定されていればURLを設定する
+                        web_builder.UseUrls(Setting.System.ListeningAddress);
+                    }
+                });
+
+            var host = host_builder.Build();
+
             // Webサーバーを開始する
-            web_host.Run();
+            host.Run();
         }
     }
 }

@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Aitalk/Aitalk.csproj" />
+  <Project Path="Injecter/Injecter.csproj" />
+  <Project Path="voiceroidd/voiceroidd.csproj" />
+  <Project Path="VoiceroidDaemon/VoiceroidDaemon.csproj">
+    <BuildDependency Project="Injecter/Injecter.csproj" />
+  </Project>
+</Solution>

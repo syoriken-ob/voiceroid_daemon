@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Runtime.Serialization;
+using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Json;
-using VoiceroidDaemon.Models;
+using System.Text;
+using System.Threading;
 using Aitalk;
+using VoiceroidDaemon.Models;
 
 namespace VoiceroidDaemon
 {
